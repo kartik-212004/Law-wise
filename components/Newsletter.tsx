@@ -3,7 +3,7 @@
 import React from 'react';
 export default function Newsletter() {
   return (
-    <section className="space-y-0 text-white">
+    <section className="space-y-0 rounded-2xl border-2 border-[#31415834] text-white">
       <div className="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
         <div className="mx-auto max-w-screen-md text-center">
           <h2 className="mb-4 text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -22,7 +22,7 @@ export default function Newsletter() {
                 type="email"
                 id="email"
                 placeholder="Enter your email"
-                className="focus:border-primary-500 focus:ring-primary-500 dark:focus:border-primary-500 dark:focus:ring-primary-500 w-full rounded-lg border border-gray-300 bg-transparent p-3 pl-10 text-sm text-white placeholder-gray-400 dark:border-gray-600"
+                className="focus:border-primary-500 focus:ring-primary-500 dark:focus:border-primary-500 dark:focus:ring-primary-500 w-full rounded-lg border border-[#31415834] bg-transparent p-3 pl-10 text-sm text-white placeholder-gray-400"
               />
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                 <svg
