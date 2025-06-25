@@ -27,14 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
       >
-        <div className="flex min-h-screen flex-col">
+        <div className="flex min-h-screen flex-col overflow-x-hidden">
           <Navbar />
           <PatternBackground>
-            <div className="container mx-auto max-w-6xl flex-1 py-8">
-              {children}
-            </div>
+            <div className="flex-1 overflow-x-hidden py-8">{children}</div>
           </PatternBackground>
         </div>
       </body>
