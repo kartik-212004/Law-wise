@@ -38,7 +38,7 @@ export const Cover = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       ref={ref}
-      className="relative hover:bg-neutral-900 bg-[#17171777] group/cover inline-block px-2 py-2transition duration-200 rounded-sm"
+      className="group/cover py-2transition relative inline-block rounded-sm bg-[#17171777] px-2 duration-200 hover:bg-neutral-900"
     >
       <AnimatePresence>
         {hovered && (
@@ -51,7 +51,7 @@ export const Cover = ({
                 duration: 0.2,
               },
             }}
-            className="h-full w-full overflow-hidden absolute inset-0"
+            className="absolute inset-0 h-full w-full overflow-hidden"
           >
             <motion.div
               animate={{
@@ -64,14 +64,14 @@ export const Cover = ({
                   repeat: Infinity,
                 },
               }}
-              className="w-[200%] h-full flex"
+              className="flex h-full w-[200%]"
             >
               <SparklesCore
                 background="transparent"
                 minSize={0.4}
                 maxSize={1}
                 particleDensity={500}
-                className="w-full h-full"
+                className="h-full w-full"
                 particleColor="#FFFFFF"
               />
               <SparklesCore
@@ -79,7 +79,7 @@ export const Cover = ({
                 minSize={0.4}
                 maxSize={1}
                 particleDensity={500}
-                className="w-full h-full"
+                className="h-full w-full"
                 particleColor="#FFFFFF"
               />
             </motion.div>
@@ -131,15 +131,15 @@ export const Cover = ({
           },
         }}
         className={cn(
-          'text-white inline-block relative z-20 group-hover/cover:text-white transition duration-200',
+          'relative z-20 inline-block text-white transition duration-200 group-hover/cover:text-white',
           className
         )}
       >
         {children}
       </motion.span>
-      <CircleIcon className="absolute -right-[2px] -top-[2px]" />
-      <CircleIcon className="absolute -bottom-[2px] -right-[2px]" delay={0.4} />
-      <CircleIcon className="absolute -left-[2px] -top-[2px]" delay={0.8} />
+      <CircleIcon className="absolute -top-[2px] -right-[2px]" />
+      <CircleIcon className="absolute -right-[2px] -bottom-[2px]" delay={0.4} />
+      <CircleIcon className="absolute -top-[2px] -left-[2px]" delay={0.8} />
       <CircleIcon className="absolute -bottom-[2px] -left-[2px]" delay={1.6} />
     </div>
   );
@@ -219,7 +219,7 @@ export const CircleIcon = ({
   return (
     <div
       className={cn(
-        `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-400 dark:bg-white opacity-20 group-hover/cover:bg-white`,
+        `group pointer-events-none h-2 w-2 animate-pulse rounded-full bg-neutral-400 opacity-20 group-hover/cover:hidden group-hover/cover:bg-white group-hover/cover:opacity-100 dark:bg-white`,
         className
       )}
     ></div>

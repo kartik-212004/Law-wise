@@ -3,19 +3,19 @@ import { Button } from './ui/button';
 
 function Navbar() {
   return (
-    <nav className="border-b border-[#4a4a4a52] bg-transparent py-2 shadow-sm">
-      <div className="container mx-auto max-w-6xl flex items-center justify-between px-4">
+    <nav className="border-b border-[#4a4a4a52] bg-[#04000f] py-2 shadow-sm">
+      <div className="container mx-auto flex max-w-6xl items-center justify-between px-4">
         {/* Logo */}
         <div className="text-xl font-medium tracking-tight text-white">
           LawWise
         </div>
 
         {/* Navigation Links */}
-        <ul className="hidden md:flex space-x-4 text-sm md:text-base font-medium text-white">
+        <ul className="hidden space-x-4 text-sm font-medium text-white md:flex md:text-base">
           {['Home', 'About'].map((item) => (
             <li
               key={item}
-              className="px-3 py-1 rounded-full cursor-pointer hover:bg-[#1f1b2e] hover:text-slate-300 transition-colors"
+              className="cursor-pointer rounded-full px-3 py-1 transition-colors hover:bg-[#1f1b2e] hover:text-slate-300"
             >
               {item}
             </li>
@@ -25,7 +25,7 @@ function Navbar() {
         {/* Login Button */}
         <Button
           variant="outline"
-          className="bg-white text-slate-900 font-medium hover:bg-gray-200 transition px-4 py-1 text-sm"
+          className="bg-white px-4 py-1 text-sm font-medium text-slate-900 transition hover:bg-gray-200"
         >
           Login
         </Button>
